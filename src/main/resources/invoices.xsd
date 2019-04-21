@@ -1,0 +1,46 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rsm="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100"
+           targetNamespace="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100" elementFormDefault="qualified">
+
+    <xs:element name="sendInvoiceRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CrossIndustryInvoice" type="rsm:CrossIndustryInvoice"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="sendInvoiceResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="CrossIndustryInvoice">
+        <xs:sequence>
+            <xs:element name="ExchangedDocumentContext" type="rsm:ExchangedDocumentContext"/>
+            <xs:element name="ExchangedDocument" type="rsm:ExchangedDocument"/>
+            <xs:element name="SupplyChainTradeTransaction" type="rsm:SupplyChainTradeTransaction"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="ExchangedDocumentContext">
+        <xs:sequence>
+            <xs:any minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>    
+
+    <xs:complexType name="ExchangedDocument">
+        <xs:sequence>
+            <xs:any minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType> 
+    
+    <xs:complexType name="SupplyChainTradeTransaction">
+        <xs:sequence>
+            <xs:any minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType> 
+
+</xs:schema>
