@@ -1,54 +1,84 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-				  xmlns:rsm="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
    <soapenv:Header/>
    <soapenv:Body>
-      <rsm:sendInvoiceRequest>
+      <rsm:sendInvoiceRequest xmlns:rsm="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100">
 	<rsm:CrossIndustryInvoice xmlns:rsm="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100"
-			          xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"
-			          xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"
-			          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			          xsi:schemaLocation="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100 ../../../schemas/UN_CEFACT/CrossIndustryInvoice_100pD16B.xsd">
+				  xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"
+				  xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"
+				  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				  xsi:schemaLocation="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100 ../../../schemas/UN_CEFACT/CrossIndustryInvoice_100pD16B.xsd">
 	    <rsm:ExchangedDocumentContext>
 		<ram:GuidelineSpecifiedDocumentContextParameter>
 		    <ram:ID>urn:cen.eu:en16931:2017#compliant#urn:xoev-de:kosit:standard:xrechnung_1.2</ram:ID>
 		</ram:GuidelineSpecifiedDocumentContextParameter>
 	    </rsm:ExchangedDocumentContext>
 	    <rsm:ExchangedDocument>
-		<ram:ID>123456</ram:ID>
+		<ram:ID>123456XX</ram:ID>
 		<ram:TypeCode>380</ram:TypeCode>
 		<ram:IssueDateTime>
-		    <udt:DateTimeString format="102">20160621</udt:DateTimeString>
+		    <udt:DateTimeString format="102">20160404</udt:DateTimeString>
 		</ram:IssueDateTime>
 		<ram:IncludedNote>
-		    <ram:Content>Bei Fragen zu Ihrer Rechnung wenden Sie sich bitte an unseren Kundenserivce. Sie erreichen uns per Email: […], Tel.: […] oder Fax: […]</ram:Content>
-		    <ram:SubjectCode>ADU</ram:SubjectCode>
-		</ram:IncludedNote>
-		<ram:IncludedNote>
-		    <ram:Content>Die Lieferung erfolgt aufgrund der AGB […] erhältlich unter […]. Auf Wunsch senden wir sie auch zu.</ram:Content>
-		    <ram:SubjectCode>ADU</ram:SubjectCode>
-		</ram:IncludedNote>
-		<ram:IncludedNote>
-		    <ram:Content>Hinweis gemäß § 33 BDSG: Kundendaten werden gespeichert.</ram:Content>
-		    <ram:SubjectCode>ADU</ram:SubjectCode>
-		</ram:IncludedNote>
-		<ram:IncludedNote>
-		    <ram:Content>Beschädigt eingehende Sendungen bitte sofort beim Spediteur bzw. Paketdienstleister reklamieren. Genehmigte Rücksendungen schicken Sie bitte mit den Unterlagen an: […]</ram:Content>
+		    <ram:Content>Es gelten unsere Allgem. Geschäftsbedingungen, die Sie unter […] finden.</ram:Content>
 		    <ram:SubjectCode>ADU</ram:SubjectCode>
 		</ram:IncludedNote>
 	    </rsm:ExchangedDocument>
 	    <rsm:SupplyChainTradeTransaction>
 		<ram:IncludedSupplyChainTradeLineItem>
 		    <ram:AssociatedDocumentLineDocument>
-			<ram:LineID>SZ300540</ram:LineID>
+			<ram:LineID>Zeitschrift [...]</ram:LineID>
+			<ram:IncludedNote>
+			    <ram:Content>Die letzte Lieferung im Rahmen des abgerechneten Abonnements erfolgt in 12/2016 Lieferung erfolgt / erfolgte direkt vom Verlag</ram:Content>
+			</ram:IncludedNote>
 		    </ram:AssociatedDocumentLineDocument>
 		    <ram:SpecifiedTradeProduct>
-			<ram:SellerAssignedID>SZ300540</ram:SellerAssignedID>
-			<ram:Name>Denk doch, wie du willst</ram:Name>
-			<ram:Description>Einblicke v. Deutschlands wicht. Ökonomen</ram:Description>
+			<ram:SellerAssignedID>246</ram:SellerAssignedID>
+			<ram:Name>Zeitschrift [...]</ram:Name>
+			<ram:Description>Zeitschrift Inland</ram:Description>
+			<ram:DesignatedProductClassification>
+			    <ram:ClassCode listID="IB">0721-880X</ram:ClassCode>
+			</ram:DesignatedProductClassification>
+		    </ram:SpecifiedTradeProduct>
+		    <ram:SpecifiedLineTradeAgreement>
+			<ram:BuyerOrderReferencedDocument>
+			    <ram:LineID>6171175.1</ram:LineID>
+			</ram:BuyerOrderReferencedDocument>
+			<ram:NetPriceProductTradePrice>
+			    <ram:ChargeAmount>288.79</ram:ChargeAmount>
+			</ram:NetPriceProductTradePrice>
+		    </ram:SpecifiedLineTradeAgreement>
+		    <ram:SpecifiedLineTradeDelivery>
+			<ram:BilledQuantity unitCode="XPP">1</ram:BilledQuantity>
+		    </ram:SpecifiedLineTradeDelivery>
+		    <ram:SpecifiedLineTradeSettlement>
+			<ram:ApplicableTradeTax>
+			    <ram:TypeCode>VAT</ram:TypeCode>
+			    <ram:CategoryCode>S</ram:CategoryCode>
+			    <ram:RateApplicablePercent>7</ram:RateApplicablePercent>
+			</ram:ApplicableTradeTax>
+			<ram:BillingSpecifiedPeriod>
+			    <ram:StartDateTime>
+				<udt:DateTimeString format="102">20160101</udt:DateTimeString>
+			    </ram:StartDateTime>
+			    <ram:EndDateTime>
+				<udt:DateTimeString format="102">20161231</udt:DateTimeString>
+			    </ram:EndDateTime>
+			</ram:BillingSpecifiedPeriod>
+			<ram:SpecifiedTradeSettlementLineMonetarySummation>
+			    <ram:LineTotalAmount>288.79</ram:LineTotalAmount>
+			</ram:SpecifiedTradeSettlementLineMonetarySummation>
+		    </ram:SpecifiedLineTradeSettlement>
+		</ram:IncludedSupplyChainTradeLineItem>
+		<ram:IncludedSupplyChainTradeLineItem>
+		    <ram:AssociatedDocumentLineDocument>
+			<ram:LineID>Porto + Versandkosten</ram:LineID>
+		    </ram:AssociatedDocumentLineDocument>
+		    <ram:SpecifiedTradeProduct>
+			<ram:Name>Porto + Versandkosten</ram:Name>
 		    </ram:SpecifiedTradeProduct>
 		    <ram:SpecifiedLineTradeAgreement>
 			<ram:NetPriceProductTradePrice>
-			    <ram:ChargeAmount>11.78</ram:ChargeAmount>
+			    <ram:ChargeAmount>26.07</ram:ChargeAmount>
 			</ram:NetPriceProductTradePrice>
 		    </ram:SpecifiedLineTradeAgreement>
 		    <ram:SpecifiedLineTradeDelivery>
@@ -61,26 +91,26 @@
 			    <ram:RateApplicablePercent>7</ram:RateApplicablePercent>
 			</ram:ApplicableTradeTax>
 			<ram:SpecifiedTradeSettlementLineMonetarySummation>
-			    <ram:LineTotalAmount>11.78</ram:LineTotalAmount>
+			    <ram:LineTotalAmount>26.07</ram:LineTotalAmount>
 			</ram:SpecifiedTradeSettlementLineMonetarySummation>
 		    </ram:SpecifiedLineTradeSettlement>
 		</ram:IncludedSupplyChainTradeLineItem>
 		<ram:ApplicableHeaderTradeAgreement>
-		    <ram:BuyerReference>04011000-12346-33</ram:BuyerReference>
+		    <ram:BuyerReference>04011000-12345-34</ram:BuyerReference>
 		    <ram:SellerTradeParty>
 			<ram:Name>[Seller name]</ram:Name>
-			<ram:Description>Geschäftsführer: […], Sitz der GmbH ist […], Amtsgericht […]</ram:Description>
+			<ram:Description>123/456/7890, HRA-Eintrag in […]</ram:Description>
 			<ram:SpecifiedLegalOrganization>
-			    <ram:ID>[HRB-Eintrag]</ram:ID>
+			    <ram:ID>[HRA-Eintrag]</ram:ID>
 			    <ram:TradingBusinessName>[Seller trading name]</ram:TradingBusinessName>
 			</ram:SpecifiedLegalOrganization>
 			<ram:DefinedTradeContact>
-			    <ram:PersonName>-</ram:PersonName>
+			    <ram:PersonName>nicht vorhanden</ram:PersonName>
 			    <ram:TelephoneUniversalCommunication>
-			        <ram:CompleteNumber>[012-3456789]</ram:CompleteNumber>
+				<ram:CompleteNumber>+49 1234-5678</ram:CompleteNumber>
 			    </ram:TelephoneUniversalCommunication>
 			    <ram:EmailURIUniversalCommunication>
-			        <ram:URIID>[Seller@email.de]</ram:URIID>
+				<ram:URIID>seller@email.de</ram:URIID>
 			    </ram:EmailURIUniversalCommunication>
 			</ram:DefinedTradeContact>
 			<ram:PostalTradeAddress>
@@ -90,15 +120,15 @@
 			    <ram:CountryID>DE</ram:CountryID>
 			</ram:PostalTradeAddress>
 			<ram:SpecifiedTaxRegistration>
-			    <ram:ID schemeID="VA">DE123456789</ram:ID>
+			  <ram:ID schemeID="FC">201/113/40209</ram:ID>
+			</ram:SpecifiedTaxRegistration>
+			<ram:SpecifiedTaxRegistration>
+			  <ram:ID schemeID="VA">DE123456789</ram:ID>
 			</ram:SpecifiedTaxRegistration>
 		    </ram:SellerTradeParty>
 		    <ram:BuyerTradeParty>
-			<ram:ID>BI12345678</ram:ID>
+			<ram:ID>[Buyer identifier]</ram:ID>
 			<ram:Name>[Buyer name]</ram:Name>
-			<ram:DefinedTradeContact>
-			    <ram:PersonName>[Buyer contact person]</ram:PersonName>
-			</ram:DefinedTradeContact>
 			<ram:PostalTradeAddress>
 			    <ram:PostcodeCode>12345</ram:PostcodeCode>
 			    <ram:LineOne>[Buyer address line 1]</ram:LineOne>
@@ -106,23 +136,11 @@
 			    <ram:CountryID>DE</ram:CountryID>
 			</ram:PostalTradeAddress>
 		    </ram:BuyerTradeParty>
-		    <ram:SellerOrderReferencedDocument>
-			<ram:IssuerAssignedID>SO12345678</ram:IssuerAssignedID>
-		    </ram:SellerOrderReferencedDocument>
 		</ram:ApplicableHeaderTradeAgreement>
-		<ram:ApplicableHeaderTradeDelivery>
-		    <ram:ActualDeliverySupplyChainEvent>
-			<ram:OccurrenceDateTime>
-			    <udt:DateTimeString format="102">20160621</udt:DateTimeString>
-			</ram:OccurrenceDateTime>
-		    </ram:ActualDeliverySupplyChainEvent>
-		</ram:ApplicableHeaderTradeDelivery>
+		<ram:ApplicableHeaderTradeDelivery/>
 		<ram:ApplicableHeaderTradeSettlement>
 		    <ram:TaxCurrencyCode>EUR</ram:TaxCurrencyCode>
 		    <ram:InvoiceCurrencyCode>EUR</ram:InvoiceCurrencyCode>
-		    <ram:PayeeTradeParty>
-			<ram:Name>VSB - Verlagsservice Braunschweig GmbH</ram:Name>
-		    </ram:PayeeTradeParty>
 		    <ram:SpecifiedTradeSettlementPaymentMeans>
 			<ram:TypeCode>30</ram:TypeCode>
 			<ram:PayeePartyCreditorFinancialAccount>
@@ -130,25 +148,26 @@
 			</ram:PayeePartyCreditorFinancialAccount>
 		    </ram:SpecifiedTradeSettlementPaymentMeans>
 		    <ram:ApplicableTradeTax>
-			<ram:CalculatedAmount>0.82</ram:CalculatedAmount>
+			<ram:CalculatedAmount>22.04</ram:CalculatedAmount>
 			<ram:TypeCode>VAT</ram:TypeCode>
-			<ram:BasisAmount>11.78</ram:BasisAmount>
+			<ram:BasisAmount>314.86</ram:BasisAmount>
 			<ram:CategoryCode>S</ram:CategoryCode>
 			<ram:RateApplicablePercent>7</ram:RateApplicablePercent>
 		    </ram:ApplicableTradeTax>
 		    <ram:SpecifiedTradePaymentTerms>
-			<ram:Description>Bitte überweisen Sie den Betrag innerhalb von 14 Tagen auf unten stehendes Konto. Das Rechnungsdatum entspricht dem Versanddatum.</ram:Description>
+			<ram:Description>Zahlbar sofort ohne Abzug.</ram:Description>
 		    </ram:SpecifiedTradePaymentTerms>
 		    <ram:SpecifiedTradeSettlementHeaderMonetarySummation>
-			<ram:LineTotalAmount>11.78</ram:LineTotalAmount>
-			<ram:TaxBasisTotalAmount>11.78</ram:TaxBasisTotalAmount>
-			<ram:TaxTotalAmount currencyID="EUR">0.82</ram:TaxTotalAmount>
-			<ram:GrandTotalAmount>12.6</ram:GrandTotalAmount>
-			<ram:DuePayableAmount>12.6</ram:DuePayableAmount>
+			<ram:LineTotalAmount>314.86</ram:LineTotalAmount>
+			<ram:TaxBasisTotalAmount>314.86</ram:TaxBasisTotalAmount>
+			<ram:TaxTotalAmount currencyID="EUR">22.04</ram:TaxTotalAmount>
+			<ram:GrandTotalAmount>336.9</ram:GrandTotalAmount>
+			<ram:DuePayableAmount>336.9</ram:DuePayableAmount>
 		    </ram:SpecifiedTradeSettlementHeaderMonetarySummation>
 		</ram:ApplicableHeaderTradeSettlement>
 	    </rsm:SupplyChainTradeTransaction>
 	</rsm:CrossIndustryInvoice>
+
       </rsm:sendInvoiceRequest>
    </soapenv:Body>
 </soapenv:Envelope>
